@@ -8,6 +8,7 @@ from typing import TYPE_CHECKING, Any, cast
 from music_assistant_models.auth import Scope
 from music_assistant_models.enums import MediaType, ProviderFeature
 from music_assistant_models.errors import MediaNotFoundError, ProviderUnavailableError
+from music_assistant_models.helpers import create_safe_string
 from music_assistant_models.media_items import (
     Podcast,
     PodcastEpisode,
@@ -21,7 +22,6 @@ from music_assistant.controllers.webserver.helpers.auth_middleware import get_cu
 from music_assistant.helpers.compare import (
     compare_media_item,
     compare_podcast,
-    create_safe_string,
     loose_compare_strings,
 )
 from music_assistant.helpers.database import UNSET
